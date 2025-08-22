@@ -3,10 +3,10 @@ from __future__ import annotations
 import os
 from pathlib import Path
 from typing import Dict
-
+from flask import Flask, request, jsonify, render_template_string
+from flask_cors import CORS
 import pandas as pd
 import plotly.graph_objects as go
-import streamlit as st
 
 from savemax.app.auth import is_authenticated, login, logout, signup, SESSION_USER_KEY
 from savemax.app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime
@@ -14,6 +14,13 @@ from savemax.app.database import ensure_dbs, save_history, get_recent_history
 from savemax.app.recommender import compare_regimes, generate_suggestions
 from savemax.app.ui_components import gradient_header, metric_card, two_column_metrics, format_inr
 from savemax.app.exports import export_csv, export_pdf
+
+# Initialize Flask app
+app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
+
+# Enable CORS for API routes
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
 LOGO_PATH = ASSETS_DIR / "savemax_logo.png"
@@ -182,4 +189,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-	main() 
+	ensure_dbs()
+	_ensure_logo()
+	app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000))) 

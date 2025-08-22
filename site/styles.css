@@ -175,4 +175,31 @@ cite {
 	margin-left: 8px;
 	text-decoration: none;
 	font-size: 18px;
+}
+
+.api-test {
+	max-width: 1100px;
+	margin: 0 auto 80px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.api-test h2 {
+	margin-bottom: 24px;
+	font-size: 28px;
+	letter-spacing: 0.01em;
+}
+
+.api-test pre {
+	background: var(--card);
+	border: 1px solid var(--shadow-light);
+	border-radius: 12px;
+	padding: 20px;
+	text-align: left;
+	overflow-x: auto;
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+	font-size: 14px;
+	color: var(--accent);
+	max-width: 600px;
+	margin: 0 auto;
 } 

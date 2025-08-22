@@ -58,6 +58,11 @@
 		</div>
 	</section>
 
+	<section class="api-test">
+		<h2>API Status</h2>
+		<pre id="ping">Checking API status...</pre>
+	</section>
+
 	<footer class="footer">
 		<div class="footer-content">
 			<p>© <span id="year"></span> SaveMax. All rights reserved.</p>
@@ -70,6 +75,17 @@
 	</footer>
 	<script>
 		document.getElementById('year').textContent = new Date().getFullYear();
+		
+		// Test API call
+		fetch("/api/ping")
+			.then(res => res.json())
+			.then(data => {
+				document.getElementById("ping").textContent = JSON.stringify(data, null, 2);
+			})
+			.catch(err => {
+				console.error("API error:", err);
+				document.getElementById("ping").textContent = "API Error: " + err.message;
+			});
 	</script>
 </body>
 </html> 
