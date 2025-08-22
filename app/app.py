@@ -8,12 +8,12 @@ from flask_cors import CORS
 import pandas as pd
 import plotly.graph_objects as go
 
-from savemax.app.auth import is_authenticated, login, logout, signup, SESSION_USER_KEY
-from savemax.app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime
-from savemax.app.database import ensure_dbs, save_history, get_recent_history
-from savemax.app.recommender import compare_regimes, generate_suggestions
-from savemax.app.ui_components import gradient_header, metric_card, two_column_metrics, format_inr
-from savemax.app.exports import export_csv, export_pdf
+from app.auth import is_authenticated, login, logout, signup, SESSION_USER_KEY
+from app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime
+from app.database import ensure_dbs, save_history, get_recent_history
+from app.recommender import compare_regimes, generate_suggestions
+from app.ui_components import gradient_header, metric_card, two_column_metrics, format_inr
+from app.exports import export_csv, export_pdf
 
 # Initialize Flask app
 app = Flask(__name__)

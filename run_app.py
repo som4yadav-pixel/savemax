@@ -13,7 +13,7 @@ current_dir = Path(__file__).parent.parent
 sys.path.insert(0, str(current_dir))
 
 # Now import and run the app
-from savemax.app.app import main
+from app.app import main
 
 if __name__ == "__main__":
     main() 

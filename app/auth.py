@@ -3,7 +3,7 @@ from __future__ import annotations
 import bcrypt
 import streamlit as st
 
-from savemax.app.database import create_user, get_user_hash
+from app.database import create_user, get_user_hash
 
 
 SESSION_USER_KEY = "savemax_user"

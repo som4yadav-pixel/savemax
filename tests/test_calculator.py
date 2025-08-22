@@ -1,6 +1,6 @@
 import unittest
 
-from savemax.app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime
+from app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime
 
 
 class TestCalculator(unittest.TestCase):

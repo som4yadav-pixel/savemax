@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Dict, Tuple
 
-from savemax.app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime, STANDARD_DEDUCTION_NEW
+from app.calculator import TaxInputs, calculate_old_regime, calculate_new_regime, STANDARD_DEDUCTION_NEW
 
 
 def compare_regimes(inputs: TaxInputs) -> Tuple[str, Dict[str, float], Dict[str, float]]:
