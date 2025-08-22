@@ -22,6 +22,10 @@ app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-producti
 # Enable CORS for API routes
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
+@app.route("/api/ping")
+def ping():
+    return jsonify({"message": "pong"})
+
 ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
 LOGO_PATH = ASSETS_DIR / "savemax_logo.png"
 CUSTOM_CSS = ASSETS_DIR / "custom.css"
