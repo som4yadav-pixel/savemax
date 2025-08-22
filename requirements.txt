@@ -1,0 +1,6 @@
+streamlit>=1.35
+pandas>=2.0
+plotly>=5.22
+bcrypt>=4.1
+reportlab>=4.0
+# sqlite3 is part of Python standard library; no pip package required 

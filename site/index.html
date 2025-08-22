@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>SaveMax – Smarter Tax, Bigger Savings</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="hero">
+		<div class="hero-content">
+			<img src="../assets/savemax_logo.png" alt="SaveMax Logo" class="logo" onerror="this.style.display='none'">
+			<h1>SaveMax</h1>
+			<p class="tagline">Smarter Tax, Bigger Savings</p>
+			<a class="cta" href="/app">🚀 Launch App</a>
+		</div>
+	</header>
+
+	<section class="features">
+		<h2>Why SaveMax?</h2>
+		<div class="feature-grid">
+			<div class="card">
+				<div class="icon">📊</div>
+				<h3>Compare Old vs New Regime</h3>
+				<p>Side-by-side comparison to pick the most tax-efficient regime for you.</p>
+			</div>
+			<div class="card">
+				<div class="icon">🤖</div>
+				<h3>Personalized Tax Suggestions</h3>
+				<p>Actionable, AI-like insights to optimize deductions and maximize savings.</p>
+			</div>
+			<div class="card">
+				<div class="icon">📑</div>
+				<h3>Export Reports</h3>
+				<p>Download professional PDFs and CSVs to keep or share your records.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonials">
+		<h2>Loved by Smart Savers</h2>
+		<div class="testimonial-grid">
+			<blockquote>
+				<p>“I saved more than I expected. The comparison is so clear!”</p>
+				<cite>— Ananya, Bengaluru</cite>
+			</blockquote>
+			<blockquote>
+				<p>“Beautiful and simple. The suggestions are genuinely useful.”</p>
+				<cite>— Rohit, Pune</cite>
+			</blockquote>
+			<blockquote>
+				<p>“The export feature made filing a breeze.”</p>
+				<cite>— Neha, Delhi</cite>
+			</blockquote>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer-content">
+			<p>© <span id="year"></span> SaveMax. All rights reserved.</p>
+			<div class="socials">
+				<a href="#" aria-label="Twitter">🐦</a>
+				<a href="#" aria-label="LinkedIn">💼</a>
+				<a href="#" aria-label="Email">✉️</a>
+			</div>
+		</div>
+	</footer>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html> 
